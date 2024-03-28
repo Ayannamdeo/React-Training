@@ -8,3 +8,5 @@ export function Weather(props){
         return <h1>it's cold today</h1>
     }
 }
+
+
