@@ -1,54 +1,69 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
 
 import {
-    App,
-    Button,
-    Counter,
-    
-    TaskList,
-    UserCard,
-    Weather}  from './Assignment1';
+  Counter2,
+  CounterWithStep,
+  PersonForm,
+  RandomNumberGenerator,
+  ShowClock,
+  ToDoList,
+  Notification,
+  Slideshow,
+  ThemeSwitcher,
+  LanguageSwitch,
+  ShoppingCart,
+  Vote,
+  CounterWithUseCallback,
+  TaskListUseCallback,
+  StudentList,
+  EmployeeSalary,
+  Clipboard,
+} from "./Assignment2";
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
-    <hr/>
-    <br/>
     
+    {/* <Counter2 />
+    <br />
 
-    <UserCard 
-        name="person1"
-        email="person1@gmail.com"
-        url = "https://i.imgur.com/1bX5QH6.jpg"
-              />
-    <UserCard 
-        name="person2"
-        email="person2@gmail.com"
-        url = "https://i.imgur.com/OKS67lh.jpg"
-              />
-    <hr/>
-    <br/>  
-    <Weather temperature={26}/>
-    <Weather temperature={8}/>
-    <hr/>
-    <br/>
+    <PersonForm />
+    <br />
 
-    <TaskList tasks={['task1', 'task2', 'task3', 'task4']}/>
-    <hr/>
-    <br/>
+    <ToDoList />
+    <br />
 
-    <Counter />
-    <hr/>
-    <br/>
+    <RandomNumberGenerator />
+    <br />
 
-    <Button text='Submit' color="blue"/>
-    <Button text='Cancel' color="red"/>
-    <Button text='Save' color="Green"/>
-    <hr/>
-    <br/>
+    <CounterWithStep />
+    <br />
+    <br />
+    <ShowClock/>
+    <br />
+    <br />
+    <Notification />
+    <br />
+    <Slideshow />
+    <br />
+    <ThemeSwitcher />
+    <br />
+    <LanguageSwitch /> */}
+    <br />
+    <ShoppingCart />
+    <br />
+    <Vote />
+    <br />
+    <CounterWithUseCallback />
+    <br />
+    <TaskListUseCallback />
+    <br />
+    <StudentList />
+    <br />
+    <EmployeeSalary />
+    <br />
+    <Clipboard />
 
 
   </React.StrictMode>
