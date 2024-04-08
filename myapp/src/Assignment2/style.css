@@ -3,6 +3,7 @@
   box-sizing: border-box;
   text-align: center;
   margin: auto;
+  list-style-type: none;
 }
 
 body {

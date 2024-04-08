@@ -16,6 +16,8 @@ import { TaskListUseCallback } from "./TaskListUseCallback"
 import { StudentList } from "./StudentList"
 import { EmployeeSalary } from "./EmployeeSalary"
 import { Clipboard } from "./Clipboard"
+import { LocalStorage } from "./LocalStorage/LocalStorage"
+import { Timer } from "./Timer"
 import './style.css'
 
 
@@ -39,4 +41,6 @@ export {
   StudentList,
   EmployeeSalary,
   Clipboard,
+  LocalStorage,
+  Timer
 };

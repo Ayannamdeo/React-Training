@@ -19,13 +19,15 @@ import {
   StudentList,
   EmployeeSalary,
   Clipboard,
+  LocalStorage,
+  Timer
 } from "./Assignment2";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     
-    {/* <Counter2 />
+    <Counter2 />
     <br />
 
     <PersonForm />
@@ -39,9 +41,7 @@ root.render(
 
     <CounterWithStep />
     <br />
-    <br />
     <ShowClock/>
-    <br />
     <br />
     <Notification />
     <br />
@@ -49,7 +49,7 @@ root.render(
     <br />
     <ThemeSwitcher />
     <br />
-    <LanguageSwitch /> */}
+    <LanguageSwitch />
     <br />
     <ShoppingCart />
     <br />
@@ -64,6 +64,10 @@ root.render(
     <EmployeeSalary />
     <br />
     <Clipboard />
+    <br />
+    <LocalStorage />
+    <br />
+    <Timer />
 
 
   </React.StrictMode>
