@@ -1,3 +1,9 @@
+
+// 2.create a functional component called personform.
+// use the usestate hook to manage three state variables: firstname, lastname, and age, all initialized to empty strings.
+// render three input fields for the user to enter their first name, last name, and age.
+// as the user types, update the respective state variables.
+// display the entered information below the input fields.import { usestate } from "react";
 import { useState } from "react";
 
 export function PersonForm(){
