@@ -5,46 +5,55 @@
 // Customize the content displayed on each sub-page.
 
 
-import React, { useState } from 'react';
-import {BrowserRouter,Route,Routes} from 'react-router-dom'
-import Home from './Home';
-import About from './About';
-import Error from './Error';
-import Login from './Login';
+import React, {  useState } from 'react';
+import {BrowserRouter ,Route,Routes, Link, useNavigate} from 'react-router-dom'
+import { Home } from "./Home";
+import { About } from "./About";
+import { Error } from "./Error";
+import { LoginContext } from './LoginContext';
+import { PrivateComponent } from './PrivateComponent';
+import { Login } from './Login';
+import { Profile } from './Profile';
+import { Dashboard } from './Dashboard';
+import { Settings } from './Settings';
 
-import {Mycontext} from './CreateContext';
-import PrivateComponent from './PrivateComponent';
-import Dashboard from './Dashboard';
-import Setting from './Setting';
-import Profile from './Profile';
+function AppLayout(){
+  const [user, setUser] = useState({});
+  const [isAuth, setIsAuth] = useState(false)
+  const navigate = useNavigate();
 
-function Ques5() {
-
-    const [auth,setauth]=useState(false);
-    const [name,setName]=useState('');
-
+  function handleLogout(){
+    setIsAuth(false);
+    setUser({});
+    navigate('/Login');
+  }
   return (
-    <>
-    <Mycontext.Provider value={{auth,setauth,name,setName}}>
-    <BrowserRouter>
-    <Routes>
-      <Route element={<PrivateComponent />}>
-        <Route path='/about' element={<About />}></Route>
-        <Route path='/dashboard' element={<Dashboard />}></Route>
-        <Route path='/dashboard/setting' element={<Setting />}></Route>
-        <Route path='/dashboard/profile' element={<Profile />}></Route>
-
-      </Route>
-        <Route path='/' element={<Home  />}></Route>
-        <Route path='/Login' element={<Login />}></Route>
-        <Route path='*' element={<Error/>}></Route>
-    </Routes>
-    </BrowserRouter>
-    </Mycontext.Provider>
-    
-    </>
-    
-  )
+    <LoginContext.Provider value={{ user, setUser, isAuth, setIsAuth }}>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/About">About</Link>
+        {isAuth && <Link to='/Dashboard'>Dashboard</Link>}
+        <hr/>
+        {isAuth && <span onClick={handleLogout}>Logout</span>}
+      </nav>
+      <Routes>
+        <Route element={<PrivateComponent />}>
+          <Route path="/About" element={<About />} />
+          <Route path="/Dashboard" element={<Dashboard />} />
+          <Route path="/Dashboard/Profile" element={<Profile />} />
+          <Route path="/Dashboard/Settings" element={<Settings />} />
+        </Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </LoginContext.Provider>
+  );
 }
-
-export default Ques5
+export function Q5(){
+    return (
+      <BrowserRouter>
+      <AppLayout />
+      </BrowserRouter>
+    );
+}
