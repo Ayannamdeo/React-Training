@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { TextField, Box, Button } from "@mui/material";
 
 
-function Ques10() {
+export function Q10() {
   return (
     <>
   <div>Ques10</div>
@@ -11,9 +11,6 @@ function Ques10() {
     </>
   )
 }
-
-export default Ques10
-
 
 function FormValidation() {
   const [name, setName] = useState("");

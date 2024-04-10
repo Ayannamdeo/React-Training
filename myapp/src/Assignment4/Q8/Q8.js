@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 
-function TemperatureConverter() {
+export function Q8() {
   const [celsius, setCelsius] = useState('');
   const [fahrenheit, setFahrenheit] = useState('');
 
@@ -45,4 +45,3 @@ function TemperatureConverter() {
   );
 }
 
-export default TemperatureConverter;

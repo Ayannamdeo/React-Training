@@ -1,3 +1,6 @@
+// 12.Build a data table using Material-UI's Table component. Populate the table with sample data and add features like sorting and pagination.
+
+
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { alpha } from '@mui/material/styles';
@@ -225,7 +228,7 @@ EnhancedTableToolbar.propTypes = {
   numSelected: PropTypes.number.isRequired,
 };
 
-export default function Ques12() {
+export  function Q12() {
   const [order, setOrder] = React.useState('asc');
   const [orderBy, setOrderBy] = React.useState('calories');
   const [selected, setSelected] = React.useState([]);

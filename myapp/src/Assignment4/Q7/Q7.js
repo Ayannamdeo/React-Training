@@ -1,9 +1,8 @@
 // 7.Design a search filter component that consists of an input field. As the user types into the input, use controlled components to filter a list of items displayed below. The list should dynamically update to show only items matching the search query.
 
 import React, { useState } from "react";
-import Filtered from "./Filtered";
 
-function Ques7() {
+export function Q7() {
   const [name, setname] = useState("");
   const list = [
     { itemname: "mobile1", category: "mobile" },
@@ -13,7 +12,7 @@ function Ques7() {
   ];
   return (
     <>
-      <div>Ques7</div>
+      <div>Q7: Search filter component</div>
       <br />
       <br />
       <input
@@ -34,4 +33,17 @@ function Ques7() {
   );
 }
 
-export default Ques7;
+function Filtered(props) {
+  return (
+    <>
+        {
+          props.name===""?<div><span>{props.item.itemname}</span> <span>{props.item.category}</span></div>:(
+            props.name===props.item.category ?
+            <div>
+            <span>{props.item.itemname}</span> <span>{props.item.category}</span>
+           </div>:""
+          )
+        }
+    </>
+  );
+}

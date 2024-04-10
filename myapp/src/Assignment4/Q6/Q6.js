@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 
-function TodoList() {
+export function Q6() {
   const [task, setTask] = useState('');
   const [tasks, setTasks] = useState([]);
 
@@ -48,4 +48,3 @@ function TodoList() {
   );
 }
 
-export default TodoList;

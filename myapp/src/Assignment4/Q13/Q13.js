@@ -18,7 +18,7 @@ const initialValues = {
   password: ""
 };
 
-const SignInForm = () => {
+export function Q13(){
   return (
     <Formik
       initialValues={initialValues}
@@ -76,5 +76,3 @@ const SignInForm = () => {
     </Formik>
   );
 };
-
-export default SignInForm;

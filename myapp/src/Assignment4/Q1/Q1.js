@@ -2,27 +2,14 @@
 
 import React, { useState } from 'react';
 
-function Ques1() {
-  const [value, setValue] = useState('');
-  
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
+export function Q1(){
+  const [state, setState] = useState("");
 
   return (
     <div>
-        <div>Ques1</div>
-        <br />
-      <span>Enter text:</span>
-      <input
-        type="text"
-        id="input"
-        value={value}
-        onChange={handleChange}
-      />
-      <p>Input value: {value}</p>
+      <h1>Q1: controlled input.</h1>
+      <input placeholder='type something' type='text' value={state} name='input' onChange={e=> setState(e.target.value)}/>
+      <p>Input is: {state} </p>
     </div>
   );
 }
-
-export default Ques1;

@@ -2,11 +2,11 @@
 
 import React, { useState } from "react";
 
-function Ques4() {
+export function Q4() {
   const [name, setname] = useState("");
   const [pass1,setpass1]=useState("");
   const [pass2,setpass2]=useState("");
-  const [status,setstatus]=useState(true);
+  const [status,setstatus]=useState(false);
   const submitHandler=(e)=>{
     e.preventDefault()
     if(pass1===pass2)
@@ -14,12 +14,13 @@ function Ques4() {
         setstatus(true);
     }
     else{
+      alert("Passwords doesn't match")
         setstatus(false);
     }
   }
   return (
     <div>
-      <div>Ques4</div>
+      <div>Q4: passwords</div>
       <form onSubmit={submitHandler}>
         <input
           type="text"
@@ -37,12 +38,10 @@ function Ques4() {
         <input type="password" value={pass2} placeholder="Re enter the password" onChange={(e)=>{setpass2(e.target.value)}}></input>
         <br/>
         <br />
-        {!status?<span>"Password Do not matched</span>:""}
+        {status ? <span>"Password Matched"</span> : ""}
         <button type="submit">Submit</button>
 
       </form>
     </div>
   );
 }
-
-export default Ques4;

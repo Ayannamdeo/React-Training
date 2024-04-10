@@ -22,7 +22,7 @@ const style = {
   p: 4,
 };
 
-export default function Ques11() {
+export function Q11() {
   const [open, setOpen] = React.useState(false);
   const [name,setName]=React.useState("");
   const [nameError,setNameError]=React.useState(false);
