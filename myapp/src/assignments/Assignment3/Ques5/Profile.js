@@ -4,7 +4,7 @@ export function Profile(){
     return (
         <div>
             <h1>Profile</h1>
-            <Link to='/Dashboard'>Go Back</Link>
+            <Link to='/dashboard'>Go Back</Link>
         </div>
     );
 }

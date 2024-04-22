@@ -6,7 +6,7 @@ export function PrivateComponent(){
     const {isAuth} = useContext(LoginContext);
     return (
         <>
-            {isAuth ? <Outlet/> : <Navigate to='/Login'/>}
+            {isAuth ? <Outlet/> : <Navigate to='/login'/>}
         </>
     );
 }
