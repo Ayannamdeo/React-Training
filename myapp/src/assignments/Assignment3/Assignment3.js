@@ -5,13 +5,13 @@ export function Assignment3(){
 
     < Q1_Q2/>
 
-    {/* <Q3 />
+    <Q3 />
 
       <Q4 />
 
       <Q5 />
       
-      <Q6 /> */}
+      <Q6 />
         </>
     );
 }

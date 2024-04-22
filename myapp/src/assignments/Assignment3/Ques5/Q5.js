@@ -25,26 +25,26 @@ function AppLayout(){
   function handleLogout(){
     setIsAuth(false);
     setUser({});
-    navigate('/Login');
+    navigate('/login');
   }
   return (
     <LoginContext.Provider value={{ user, setUser, isAuth, setIsAuth }}>
       <nav>
         <Link to="/">Home</Link>
-        <Link to="/About">About</Link>
-        {isAuth && <Link to='/Dashboard'>Dashboard</Link>}
+        <Link to="/about">About</Link>
+        {isAuth && <Link to='/dashboard'>Dashboard</Link>}
         <hr/>
         {isAuth && <span onClick={handleLogout}>Logout</span>}
       </nav>
       <Routes>
         <Route element={<PrivateComponent />}>
-          <Route path="/About" element={<About />} />
-          <Route path="/Dashboard" element={<Dashboard />} />
-          <Route path="/Dashboard/Profile" element={<Profile />} />
-          <Route path="/Dashboard/Settings" element={<Settings />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard/profile" element={<Profile />} />
+          <Route path="/dashboard/settings" element={<Settings />} />
         </Route>
         <Route path="/" element={<Home />} />
-        <Route path="/Login" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </LoginContext.Provider>

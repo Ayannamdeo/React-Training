@@ -28,15 +28,15 @@ function AppLayout(){
     <LoginContext.Provider value={{ user, setUser, isAuth, setIsAuth }}>
         <nav>
           <Link to="/">Home</Link>
-          <Link to="/About">About</Link>
+          <Link to="/about">About</Link>
           {isAuth && <span onClick={handleLogout}>Logout</span>}
         </nav>
         <Routes>
           <Route element={<PrivateComponent />}>
-            <Route path="/About" element={<About />} />
+            <Route path="/about" element={<About />} />
           </Route>
           <Route path="/" element={<Home />} />
-          <Route path="/Login" element={<Login />} />
+          <Route path="/login" element={<Login />} />
           <Route path="*" element={<Error />} />
         </Routes>
     </LoginContext.Provider>

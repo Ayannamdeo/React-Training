@@ -5,9 +5,9 @@ export function Dashboard(){
     return (
         <div>
             <h1>Dashboard</h1>
-            <Link to='/Dashboard/Profile'> Profile </Link>
+            <Link to='/dashboard/profile'> Profile </Link>
             <br />
-            <Link to='/Dashboard/Settings'> Settings </Link>
+            <Link to='/dashboard/settings'> Settings </Link>
         </div>
     );
 }
