@@ -8,7 +8,7 @@ export function Login(){
     const navigate = useNavigate();
 
     useEffect(()=> {
-        if (isAuth) navigate('/About')
+        if (isAuth) navigate('/about')
     }, [isAuth, navigate])
 
     function handleChange(e){
@@ -26,7 +26,7 @@ export function Login(){
             setIsAuth(false);
             alert("Invalid Username or Password")
         }
-        isAuth ? navigate('/About') : navigate('/Login');
+        isAuth ? navigate('/about') : navigate('/login');
     }
     return (
         <div>

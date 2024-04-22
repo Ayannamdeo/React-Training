@@ -20,11 +20,11 @@ export function Q3(){
     <BrowserRouter>
     <nav>
         <Link to="/">Home</Link>
-        <Link to= "/About">About</Link>
+        <Link to= "/about">About</Link>
     </nav>
         <Routes>
           <Route  path="/" element={<Home />}/>
-          <Route path="/About" element={<About />} />
+          <Route path="/about" element={<About />} />
           <Route  path="*" element= {<Error />}/>
         </Routes>
     </BrowserRouter>
