@@ -15,6 +15,7 @@
 // # make short-pressed Ctrl behave like Escape:
 // xcape -e 'Control_L=Escape'
 
+
 import {useState, useEffect} from 'react';
 import { Pagination } from './Pagination';
 import { TableItems } from './TableItems';
