@@ -2,6 +2,9 @@
 
 // 2.Extend Question 1 to include error handling. If a lazy-loaded component fails to load, display a user-friendly error message to the user instead of crashing the application. Implement this using the ErrorBoundary component.
 
+
+// ERROR BOUNDARY NOT SUPPORTED IN FUNCTIONAL COMPONENT - OFFICIAL REACT DOCUMENTATION
+
 import React, { Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";

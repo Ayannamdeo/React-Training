@@ -12,7 +12,7 @@ export function Assignment6(){
         {/* <LoginForm /> */}
         {/* <Q5 /> */}
         {/* <Q6 /> */}
-        <Q1_Q2 />
+        {/* <Q1_Q2 /> */}
         </>
     );
 
